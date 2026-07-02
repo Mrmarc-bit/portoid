@@ -1,4 +1,4 @@
-// Service Worker for Magic Portfolio Push Notifications
+// Service Worker for PORTOID Push Notifications
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();
@@ -19,17 +19,17 @@ self.addEventListener("push", (event) => {
       console.log("Service Worker: Payload JSON berhasil di-parse:", data);
     } catch (e) {
       const txt = event.data.text();
-      data = { title: "Magic Portfolio", body: txt };
+      data = { title: "PORTOID", body: txt };
       console.log("Service Worker: Payload teks biasa:", txt);
     }
   }
 
-  const title = data.title || "Magic Portfolio Notification";
+  const title = data.title || "PORTOID Notification";
   const options = {
-    body: data.body || "Anda memiliki notifikasi baru dari Magic Portfolio.",
-    icon: data.icon || "/images/avatar.jpg",
-    badge: data.badge || "/favicon.ico",
-    tag: data.tag || "magic-portfolio-notification",
+    body: data.body || "Anda memiliki notifikasi baru dari PORTOID.",
+    icon: data.icon || "/icons/icon-192.png",
+    badge: data.badge || "/icons/icon-96.png",
+    tag: data.tag || "portoid-notification",
     renotify: true,
     requireInteraction: true,
     data: {
