@@ -191,26 +191,36 @@ function initLocalDb() {
       posts: seeds.posts,
       gallery: seeds.gallery
     };
-    fs.writeFileSync(LOCAL_DB_PATH, JSON.stringify(initialData, null, 2), "utf-8");
+    try {
+      fs.writeFileSync(LOCAL_DB_PATH, JSON.stringify(initialData, null, 2), "utf-8");
+    } catch {
+      // Read-only filesystem (e.g. Vercel serverless) - skip local DB init
+    }
   }
 }
 
 function readLocalDb() {
-  initLocalDb();
+  try {
+    initLocalDb();
+  } catch {
+    // Can't write to filesystem (Vercel) - return seed defaults
+    const seeds = getInitialSeedData();
+    return { profile: seeds.profile, guestbook: [], subscriptions: [], projects: seeds.projects, posts: seeds.posts, gallery: seeds.gallery };
+  }
   try {
     const content = fs.readFileSync(LOCAL_DB_PATH, "utf-8");
     return JSON.parse(content);
-  } catch (error) {
-    console.error("Failed to read local DB:", error);
-    return { profile: {}, guestbook: [], subscriptions: [], projects: [], posts: [], gallery: [] };
+  } catch {
+    const seeds = getInitialSeedData();
+    return { profile: seeds.profile, guestbook: [], subscriptions: [], projects: seeds.projects, posts: seeds.posts, gallery: seeds.gallery };
   }
 }
 
 function writeLocalDb(data: any) {
   try {
     fs.writeFileSync(LOCAL_DB_PATH, JSON.stringify(data, null, 2), "utf-8");
-  } catch (error) {
-    console.error("Failed to write to local DB:", error);
+  } catch {
+    // Read-only filesystem (e.g. Vercel serverless) - writes are no-op, use Supabase instead
   }
 }
 

@@ -11,24 +11,38 @@
   "lang": "id",
   "icons": [
     {
-      "src": "/uploads/1782964973632-3hbjly2.png",
+      "src": "/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "/uploads/1782964973632-3hbjly2.png",
+      "src": "/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "screenshots": [
     {
-      "src": "/images/projects/project-01/cover-01.jpg",
+      "src": "/icons/screenshot-wide.jpg",
       "sizes": "1280x720",
       "type": "image/jpeg",
-      "label": "PORTOID Dashboard"
+      "form_factor": "wide",
+      "label": "PORTOID – Desktop View"
+    },
+    {
+      "src": "/icons/screenshot-narrow.jpg",
+      "sizes": "1024x1024",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "PORTOID – Mobile View"
     }
   ],
   "categories": ["portfolio", "design", "productivity"],
@@ -36,22 +50,26 @@
     {
       "name": "About",
       "url": "/about",
-      "description": "About Maruf Muchlisin"
+      "description": "About Maruf Muchlisin",
+      "icons": [{ "src": "/icons/icon-96.png", "sizes": "96x96", "type": "image/png" }]
     },
     {
       "name": "Work",
       "url": "/work",
-      "description": "Projects and work"
+      "description": "Projects and work",
+      "icons": [{ "src": "/icons/icon-96.png", "sizes": "96x96", "type": "image/png" }]
     },
     {
       "name": "Blog",
       "url": "/blog",
-      "description": "Blog posts"
+      "description": "Blog posts",
+      "icons": [{ "src": "/icons/icon-96.png", "sizes": "96x96", "type": "image/png" }]
     },
     {
       "name": "Gallery",
       "url": "/gallery",
-      "description": "Photo gallery"
+      "description": "Photo gallery",
+      "icons": [{ "src": "/icons/icon-96.png", "sizes": "96x96", "type": "image/png" }]
     }
   ]
 }

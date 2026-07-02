@@ -48,10 +48,10 @@ export default async function RootLayout({
         <link rel="icon" href={person.appIcon || "/favicon.ico"} />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0a0a0a" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content={person.appName || "PORTOID"} />
-        <link rel="apple-touch-icon" href={person.appIcon || "/uploads/1782964973632-3hbjly2.png"} />
+        <link rel="apple-touch-icon" href="/icons/icon-192.png" />
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
