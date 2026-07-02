@@ -75,6 +75,10 @@
 .footer-link {
   color: var(--neutral-weak) !important;
   text-decoration: none !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-link:hover {
