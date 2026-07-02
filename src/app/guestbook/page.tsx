@@ -282,19 +282,21 @@ export default function GuestbookPage() {
   return (
     <Column maxWidth="m" fillWidth gap="xl" paddingY="12" horizontal="center">
       <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="4">
-        <Row gap="8" vertical="center">
+        <Column gap="8" fillWidth>
           <Heading wrap="balance" variant="display-strong-l">
             Buku Tamu & Notifikasi
           </Heading>
-          <Badge
-            background={dbMode === "cloud" ? "brand-alpha-medium" : "neutral-alpha-medium"}
-            paddingX="12"
-            paddingY="4"
-            style={{ height: 'fit-content' }}
-          >
-            {dbMode === "cloud" ? "Supabase PostgreSQL Active" : "Local JSON Database Active"}
-          </Badge>
-        </Row>
+          <Row>
+            <Badge
+              background={dbMode === "cloud" ? "brand-alpha-medium" : "neutral-alpha-medium"}
+              paddingX="12"
+              paddingY="4"
+              style={{ height: 'fit-content', width: 'fit-content' }}
+            >
+              {dbMode === "cloud" ? "🟢 Supabase Active" : "🟡 Local DB Active"}
+            </Badge>
+          </Row>
+        </Column>
       </RevealFx>
 
       <RevealFx translateY="8" delay={0.1} fillWidth horizontal="center" paddingBottom="16">
