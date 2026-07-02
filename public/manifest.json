@@ -1,0 +1,57 @@
+{
+  "name": "PORTOID – Maruf Muchlisin",
+  "short_name": "PORTOID",
+  "description": "Portfolio website of Maruf Muchlisin, Design Engineer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "/uploads/1782964973632-3hbjly2.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/uploads/1782964973632-3hbjly2.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/projects/project-01/cover-01.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "label": "PORTOID Dashboard"
+    }
+  ],
+  "categories": ["portfolio", "design", "productivity"],
+  "shortcuts": [
+    {
+      "name": "About",
+      "url": "/about",
+      "description": "About Maruf Muchlisin"
+    },
+    {
+      "name": "Work",
+      "url": "/work",
+      "description": "Projects and work"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog",
+      "description": "Blog posts"
+    },
+    {
+      "name": "Gallery",
+      "url": "/gallery",
+      "description": "Photo gallery"
+    }
+  ]
+}
